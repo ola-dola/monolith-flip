@@ -7,11 +7,11 @@ function App() {
 
   useEffect(() => {
     fetch('/api/greeting?name=bobby')
-    .then(res => {
-      console.log('First then', res);
-      res.json();
+    .then(res => res.json() )
+    .then(greeting => {
+      debugger
+      setGreeting(greeting)
     })
-    .then(greeting => setGreeting(greeting))
     .catch(error => {
       debugger
     })
@@ -22,6 +22,7 @@ function App() {
       <header className="App-header">
         { greeting }
       </header>
+        { greeting }
     </div>
   );
 }
