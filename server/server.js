@@ -2,9 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 
-//made agreeable for both my computer and heroku.
-const port = process.env.PORT || 4000;
-
 const app = express();
 
 app.use(express.static("../client/build"));
