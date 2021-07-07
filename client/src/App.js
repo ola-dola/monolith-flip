@@ -9,13 +9,12 @@ function App() {
     fetch(`/api/greeting?name=${name}`)
       .then((res) => res.json())
       .then((greeting) => {
-        debugger;
-        alert("oops fellas. Nice of you to show up!");
+        // debugger;
+        // alert("oops fellas. Nice of you to show up!");
         setGreeting(greeting);
       })
-      .then((data) => console.log("the 3rd", data))
       .catch((error) => {
-        debugger;
+        // debugger;
       });
   };
 
@@ -23,11 +22,11 @@ function App() {
     fetch("/api/greeting?name=bobby")
       .then((res) => res.json())
       .then((greeting) => {
-        debugger;
+        // debugger;
         setGreeting(greeting);
       })
       .catch((error) => {
-        debugger;
+        // debugger;
       });
   }, []);
 
